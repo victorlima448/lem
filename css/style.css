@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #FF9900;
+	text-align:  center;
+}
+
+#container{
+	width: 1325px;
+	height: 495px;
+	border: 1px solid #321;
+	position: relative;
+	margin: 10px auto;
+	border-radius: 10px;
+	background-color: #FF9900; 
+}
+
+.card{
+	width: 160px;
+	height: 240px;
+	position: absolute;
+	border-radius: 10px;
+	
+
+}
+
+.face{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 10px;
+	transition: all 1s;
+	backface-visibility: hidden;
+}
+
+.back{
+	background: url("../img/fundo1.jpeg");
+}
+.back.flipped{
+	transform: rotateY(180deg);
+}
+.card:hover{
+	box-shadow: 0 0 25px #555;
+}
+.front{
+	transform: rotateY(-180deg);
+	
+}
+.front.flipped{
+	transform: rotateY(0deg);
+}
+
+.face.flipped.match{
+	box-shadow: 0 0 10px #0f0;
+}
+#modalGameOver{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -2;
+}
+
+#imgGameOver{
+	margin-top: 100px;
+}
+
+#imgMatchSign{
+	position: relative;
+	top: 250px;
+	transition-property: top, opacity;
+	transition-duration: 1.5s;
+	opacity: 1;
+	z-index: -1;
+}
