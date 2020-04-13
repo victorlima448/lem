@@ -115,7 +115,7 @@ function contador(){
 	function gameOver(){
 		modalGameOver.style.zIndex = 10;
 		modalGameOver.addEventListener("click",startGame,false);
-		alert("você completou o jogo em " + Math.floor(counter/2) + " movimentos");
+		alert("Sua pontuacao : " + Math.floor(counter/2) );
 		counter = 0;
 	}
 
